@@ -1,7 +1,19 @@
+# Michael Sena & Andrew Arroyos
+# This program is a Rock, Paper, Scissors game that allows the player to compete against the computer.
+# It includes a menu for selecting weapons, determining the winner of each round, and displaying scores.
+# It also includes a loop to allow the player to play multiple rounds and check_input for input validation. 
+
+#note to self: need to make # comments on code 
+
+
 import random
 import check_input
 
 def weapon_menu():
+    """
+
+
+    """
     print("Choose your weapon:")
     print("R. Rock")
     print("P. Paper")
@@ -12,7 +24,7 @@ def weapon_menu():
     while weapon not in ["R", "P", "S", "B"]:
         print("Invalid input. Please choose a valid weapon.")
         weapon = input().upper()
-    print(weapon)
+    
     if weapon == "R":
         print("You chose Rock")
     elif weapon == "P":
@@ -23,6 +35,10 @@ def weapon_menu():
     return weapon
 
 def comp_weapon():
+    """
+
+
+    """
     c_wep = random.choice(['R', 'P', 'S'])
     if c_wep == "R":
         print("Computer chose Rock")
@@ -34,6 +50,10 @@ def comp_weapon():
     return c_wep
     
 def find_winner(p_wep, c_wep):
+    """
+
+
+    """
     if p_wep == c_wep:
         print("Tie")
         return 0
@@ -45,6 +65,10 @@ def find_winner(p_wep, c_wep):
         return 2
 
 def display_scores(p_score, c_score):
+    """
+
+
+    """
     print(f"Player = {p_score}")
     print(f"Computer = {c_score}")
 
@@ -76,7 +100,9 @@ def main():
                         c_score += 1
         
         elif menu_choice == 2:
-            display_scores(p_score, c_score)    
+            display_scores(p_score, c_score)
+    print("Final Score:")
+    display_scores(p_score, c_score)
 
 
 main()
