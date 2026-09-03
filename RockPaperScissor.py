@@ -47,7 +47,7 @@ def comp_weapon():
         The computer's weapon choice as R, P, or S.
     """
     # Randomly select the computer's weapon
-    c_wep = random.choice(['R', 'P', 'S'])
+    c_wep = random.choice(["R", "P", "S"])
     if c_wep == "R":
         print("Computer chose Rock")
     elif c_wep == "P":
@@ -57,7 +57,7 @@ def comp_weapon():
 
     return c_wep
 
-    
+  
 def find_winner(p_wep, c_wep):
     """
     Compares the player's weapon and the computer's weapon
@@ -113,6 +113,7 @@ def main():
         menu_choice = check_input.get_int_range("", 1, 3)
 
         if menu_choice == 1:
+            #Note to self - I could have also used a while True: loop with a break statement instead of the current structure
             p_wep = ""
 
             while p_wep != "B":
